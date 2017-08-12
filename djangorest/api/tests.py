@@ -6,12 +6,12 @@ from django.urls import reverse
 # Create your tests here.
 class ModelTestCase(TestCase):
     def setUp(self):
-        self.car_name = "Mustang"
-        self.brand = "Ford"
+        self.car_model = "Mustang"
+        self.make = "Ford"
         self.color = "Red"
-        self.automatic = True
+        self.age = 1945
         self.insured = False
-        self.car = Car(name=self.car_name, brand=self.brand, color=self.color, automatic=self.automatic, insured=self.insured)
+        self.car = Car(model=self.car_model, make=self.make, color=self.color, age=self.age, insured=self.insured)
 
     def test_model_can_create_a_car(self):
         old_Count = Car.object.count()
